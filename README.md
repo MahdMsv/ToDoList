@@ -1,6 +1,6 @@
 # 📋 لیست کارهای جاری | To-Do List Pro
 
-✅ **یک اپلیکیشن مدرن و پیشرفته مدیریت کارها (To-Do List) با قابلیت تعیین ددلاین، اولویت‌بندی، جستجو و ذخیره‌سازی خودکار**
+✅ **یک سایت مدرن و پیشرفته مدیریت کارها (To-Do List) با قابلیت تعیین ددلاین، اولویت‌بندی، جستجو و ذخیره‌سازی خودکار**
 
 ![نسخه](https://img.shields.io/badge/version-2.0.0-blue)
 ![ساخته شده با](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-orange)
@@ -21,16 +21,6 @@
 - 🗂️ **مرتب‌سازی بر اساس**: ددلاین، اولویت، عنوان
 - 📱 **طراحی کاملاً واکنش‌گرا (Responsive)** برای موبایل، تبلت و دسکتاپ
 - 🎨 **انیمیشن‌های نرم و مدرن** با افکت شیشه‌ای (Glassmorphism)
-
----
-
-## 🖼️ پیش‌نمایش
-
-| حالت روشن                                                                  | حالت دارک                                                                |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Light Mode](https://via.placeholder.com/400x250?text=Light+Mode+Preview) | ![Dark Mode](https://via.placeholder.com/400x250?text=Dark+Mode+Preview) |
-
-> ⚠️ تصاویر فوق placeholder هستند. پس از اجرا، نمای واقعی را مشاهده خواهید کرد.
 
 ---
 
@@ -67,9 +57,11 @@ npx serve .
 ## 📂 ساختار فایل‌ها
 
 ```
-project/
+index.html/
 │
-├── index.html          # فایل اصلی برنامه (تمامی کدها در همین فایل)
+├── assets
+    js
+    css          # فایل اصلی برنامه (تمامی کدها در همین فایل)
 └── README.md           # این فایل (راهنما و توضیحات)
 ```
 
@@ -112,7 +104,7 @@ project/
 
 ## 📞 ارتباط با من
 
-[![GitHub](https://img.shields.io/badge/GitHub-MahdMsv-181717?style=for-the-badge&logo=github)](https://github.com/MahdMsv)
+(https://github.com/MahdMsv)
 
 ---
 
