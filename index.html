@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>لیست کارهای جاری | حرفه‌ای با ددلاین و اولویت</title>
+    <!-- فونت وزیرمتن فارسی -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="bg-particles"></div>
+    <div class="container">
+      <div class="glass-card">
+        <div class="header">
+          <h1><span>✅</span> لیست کارهای جاری</h1>
+          <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle">🌙 دارک</button>
+            <select class="sort-select" id="sortSelect">
+              <option value="deadline">📅 مرتب‌سازی: تاریخ ددلاین</option>
+              <option value="priority">🎯 مرتب‌سازی: اولویت</option>
+              <option value="title">🔤 مرتب‌سازی: عنوان</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-grid">
+            <div class="input-group">
+              <label>عنوان کار *</label>
+              <input
+                type="text"
+                id="taskTitle"
+                placeholder="مثال: تحویل پروژه"
+              />
+            </div>
+            <div class="input-group">
+              <label>ددلاین (حداکثر تاریخ) *</label>
+              <input type="date" id="taskDeadline" />
+            </div>
+            <div class="input-group">
+              <label>اولویت</label>
+              <select id="taskPriority">
+                <option value="low">🟢 کم</option>
+                <option value="medium" selected>🟡 متوسط</option>
+                <option value="high">🔴 بالا</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>&nbsp;</label>
+              <button class="btn-add" id="addBtn">➕ افزودن کار</button>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>توضیحات (اختیاری)</label>
+            <textarea
+              id="taskDesc"
+              rows="2"
+              placeholder="جزئیات بیشتر..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="filters-section">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="pending">در انتظار</button>
+            <button class="filter-btn" data-filter="completed">
+              انجام شده
+            </button>
+            <button class="filter-btn" data-filter="expired">
+              ⏰ تاریخ گذشته
+            </button>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="🔍 جستجوی کارها..."
+            />
+          </div>
+          <div class="stats-card" id="statsInfo">📊 ۰ کار</div>
+        </div>
+
+        <div class="tasks-section">
+          <ul class="task-list" id="taskList">
+            <li class="empty-msg">
+              🌟 به لیست کارهای خود خوش آمدید! تسک جدید اضافه کنید.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="rights">
+        ساخته شده توسط <a href="https://github.com/MahdMsv"> مهدی موسوی</a>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
