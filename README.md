@@ -1,143 +1,164 @@
-# 📋 لیست کارهای جاری | To-Do List Pro
+# 📋 To-Do List Pro
 
-✅ **یک سایت مدرن و پیشرفته مدیریت کارها (To-Do List) با قابلیت تعیین ددلاین، اولویت‌بندی، جستجو و ذخیره‌سازی خودکار**
+✅ **A modern and advanced To-Do List web app with deadline tracking, prioritization, live search, and automatic storage**
 
-![نسخه](https://img.shields.io/badge/version-2.0.0-blue)
-![ساخته شده با](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-orange)
-![وضعیت](https://img.shields.io/badge/status-stable-brightgreen)
-
----
-
-## ✨ ویژگی‌های کلیدی
-
-- ✅ **ایجاد کار جدید** با عنوان، توضیحات، ددلاین (حداکثر تاریخ) و اولویت
-- ⏰ **نمایش خودکار تاریخ‌های گذشته** (ددلاین منقضی شده با رنگ قرمز)
-- 🎯 **اولویت‌بندی سه سطحی**: کم، متوسط، بالا (با نشانگر رنگی)
-- 🔍 **جستجوی زنده** بین عنوان و توضیحات کارها
-- 📊 **فیلترهای پیشرفته**: همه، در انتظار، انجام شده، تاریخ گذشته
-- 🌓 **تم دارک/لایت** (با قابلیت ذخیره انتخاب کاربر)
-- 💾 **ذخیره خودکار در مرورگر** (با استفاده از localStorage)
-- ✏️ **ویرایش مستقیم در صفحه** (بدون popup آزاردهنده)
-- 🗂️ **مرتب‌سازی بر اساس**: ددلاین، اولویت، عنوان
-- 📱 **طراحی کاملاً واکنش‌گرا (Responsive)** برای موبایل، تبلت و دسکتاپ
-- 🎨 **انیمیشن‌های نرم و مدرن** با افکت شیشه‌ای (Glassmorphism)
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Built With](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-orange)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
 ---
 
-## 🚀 نحوه اجرا
+## ✨ Key Features
 
-### روش اول - مستقیم در مرورگر
+- ✅ **Create new tasks** with title, description, deadline, and priority
+- ⏰ **Automatic expired deadline detection** (overdue tasks highlighted)
+- 🎯 **Three-level priority system**: Low, Medium, High (with color indicators)
+- 🔍 **Live search** across task titles and descriptions
+- 📊 **Advanced filters**: All, Pending, Completed, Expired
+- 🌍 **Language switch (FA / EN)** with dynamic UI update
+- 🌓 **Dark / Light theme** with saved preference
+- 💾 **Auto-save in browser** using LocalStorage
+- ✏️ **Inline editing** (no annoying popups)
+- 🗂️ **Sorting options**: Deadline, Priority, Title
+- 📱 **Fully responsive design** for mobile, tablet, and desktop
+- 🎨 **Modern animations & glassmorphism UI**
 
-1. فایل `index.html` را دانلود کنید
-2. با دوبار کلیک در مرورگر باز کنید
-3. هیچ نیاز به سرور یا نصب اضافی نیست ✅
+---
 
-### روش دوم - با Live Server (توسعه‌دهندگان)
+## 🌍 Language Toggle
+
+This project supports **multi-language UI (Persian 🇮🇷 / English 🇺🇸)**.
+
+### How it works:
+
+- Click the **Language Toggle button (EN / FA)** in the header
+- The UI will instantly switch language
+- Direction automatically changes:
+  - Persian → RTL
+  - English → LTR
+
+- Your selected language is **saved in LocalStorage**
+
+---
+
+## 🚀 How to Run
+
+### Method 1 - Open مستقیم در مرورگر
+
+1. Download `index.html`
+2. Double-click and open it in your browser
+3. No installation or server needed ✅
+
+---
+
+### Method 2 - Using Live Server (Developers)
 
 ```bash
-# اگر VS Code دارید، روی فایل راست کلیک کرده و "Open with Live Server" را انتخاب کنید
-# یا با هر سرور محلی دیگر
+# In VS Code:
+Right-click → Open with Live Server
+
+# Or any local server:
 npx serve .
 ```
 
 ---
 
-## 🛠️ تکنولوژی‌های استفاده شده
+## 🛠️ Technologies Used
 
-| فناوری                | کاربرد                                                  |
-| --------------------- | ------------------------------------------------------- |
-| **HTML5**             | ساختار اصلی برنامه                                      |
-| **CSS3**              | طراحی مدرن، انیمیشن‌ها، تم دارک/لایت، ریسپانسیو         |
-| **JavaScript (ES6+)** | منطق برنامه، مدیریت state، ذخیره‌سازی، DOM manipulation |
-| **LocalStorage API**  | ذخیره خودکار کارها در مرورگر                            |
-| **Vazirmatn Font**    | فونت فارسی زیبا و خوانا                                 |
+| Technology            | Purpose                                       |
+| --------------------- | --------------------------------------------- |
+| **HTML5**             | App structure                                 |
+| **CSS3**              | UI design, animations, responsive layout      |
+| **JavaScript (ES6+)** | App logic, state management, DOM manipulation |
+| **LocalStorage API**  | Persistent data storage                       |
+| **Vazirmatn Font**    | Persian typography                            |
 
 ---
 
-## 📂 ساختار فایل‌ها
+## 📂 Project Structure
 
 ```
 index.html/
 │
 ├── assets
-    js
-    css          # فایل اصلی برنامه (تمامی کدها در همین فایل)
-└── README.md           # این فایل (راهنما و توضیحات)
+    ├── js
+    └── css
+└── README.md
 ```
 
-> 💡 **توجه**: تمام کدهای HTML، CSS و JavaScript در یک فایل `index.html` قرار دارند.
+> 💡 **Note:** All HTML, CSS, and JavaScript are bundled inside a single `index.html` file.
 
 ---
 
-## 🧑‍💻 راهنمای استفاده
+## 🧑‍💻 Usage Guide
 
-### افزودن کار جدید
+### ➕ Add a New Task
 
-1. عنوان کار را وارد کنید (الزامی)
-2. تاریخ ددلاین را انتخاب کنید (الزامی)
-3. اولویت را انتخاب کنید (کم/متوسط/بالا)
-4. توضیحات اختیاری بنویسید
-5. کلیک روی دکمه **"افزودن کار"**
-
-### مدیریت کارها
-
-- ✅ **تغییر وضعیت انجام/انجام نشده**: کلیک روی چک‌باکس سمت راست هر کار
-- ✏️ **ویرایش**: کلیک روی دکمه مداد (ویرایش مستقیم در صفحه)
-- 🗑️ **حذف**: کلیک روی دکمه سطل زباله (با تایید)
-- 🔍 **جستجو**: تایپ در کادر جستجو
-- 🎚️ **فیلتر**: استفاده از دکمه‌های فیلتر (همه/در انتظار/انجام شده/تاریخ گذشته)
-- 📊 **مرتب‌سازی**: انتخاب از منوی کشویی در هدر
-
-### تنظیمات ظاهری
-
-- 🌙 **تغییر تم**: کلیک روی دکمه "🌙 دارک" یا "☀️ روشن" در هدر
-- 💾 **ذخیره تم**: انتخاب شما به صورت خودکار ذخیره می‌شود
+1. Enter task title (**required**)
+2. Select a deadline (**required**)
+3. Choose priority (Low / Medium / High)
+4. (Optional) Add description
+5. Click **"Add Task"**
 
 ---
 
-## 👤 توسعه‌دهنده
+### ⚙️ Manage Tasks
 
-**نام:** Mahdi Mousavi  
-**گیت‌هاب:** [@MahdMsv](https://github.com/MahdMsv)
-
----
-
-## 📞 ارتباط با من
-
-(https://github.com/MahdMsv)
+- ✅ Toggle complete: click checkbox
+- ✏️ Edit: click edit button
+- 🗑️ Delete: click delete button (with confirmation)
+- 🔍 Search: use search input
+- 🎚️ Filter: choose task status
+- 📊 Sort: select from dropdown menu
 
 ---
 
-## 📄 لایسنس
+### 🎨 Appearance Settings
 
-این پروژه تحت لایسنس **MIT** منتشر شده است. استفاده آزاد، ویرایش و توزیع با ذکر نام توسعه‌دهنده مجاز است.
+- 🌙 Toggle Dark/Light mode
+- 💾 Theme preference is automatically saved
+
+---
+
+## 👤 Developer
+
+**Name:** Mahdi Mousavi
+**GitHub:** https://github.com/MahdMsv
+
+---
+
+## 📞 Contact
+
+https://github.com/MahdMsv
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
 
 ```
 MIT License
 
 Copyright (c) 2026 Mahdi Mousavi
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
+Permission is hereby granted, free of charge...
 ```
 
 ---
 
-## 🌟 اگر از این پروژه خوشتان آمد
+## 🌟 Support the Project
 
-- ⭐ به پروژه **Star** دهید (در گیت‌هاب)
-- 🐛 اگر باگی دیدید، **Issue** ثبت کنید
-- 📢 با دوستان خود به اشتراک بگذارید
+If you like this project:
 
----
-
-**💡 نکته:** برای پیشنهادات و بهبودها، خوشحال می‌شوم که Issues یا Pull Requests شما را ببینم.
+- ⭐ Star it on GitHub
+- 🐛 Report bugs via Issues
+- 📢 Share it with others
 
 ---
 
-توسعه داده شده با ❤️ و ☕ توسط Mahdi Mousavi
+**💡 Tip:** Feel free to contribute via Issues or Pull Requests.
 
-```
+---
 
-```
+Made with ❤️ and ☕ by Mahdi Mousavi
