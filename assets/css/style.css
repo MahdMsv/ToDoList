@@ -532,3 +532,47 @@ body.dark .priority-low .priority-badge {
 .rights {
   color: white;
 }
+/*  language button */
+.lang-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Vazirmatn", sans-serif;
+  transition: var(--transition);
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+html[dir="ltr"] {
+  direction: ltr;
+}
+html[dir="ltr"] .header,
+html[dir="ltr"] .filters-section {
+  direction: ltr;
+}
+
+html[dir="ltr"] .task-item {
+  direction: ltr;
+}
+
+/* alignment for english */
+html[dir="ltr"] .task-item.priority-high,
+html[dir="ltr"] .task-item.priority-medium,
+html[dir="ltr"] .task-item.priority-low {
+  border-right: none;
+  border-left: 5px solid;
+}
+
+html[dir="ltr"] .task-item.priority-high {
+  border-left-color: var(--priority-high);
+}
+html[dir="ltr"] .task-item.priority-medium {
+  border-left-color: var(--priority-medium);
+}
+html[dir="ltr"] .task-item.priority-low {
+  border-left-color: var(--priority-low);
+}
