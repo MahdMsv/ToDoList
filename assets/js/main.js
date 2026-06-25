@@ -318,3 +318,125 @@ window.startEdit = startEdit;
 window.deleteTask = deleteTask;
 
 init();
+// =======================
+// 🌍 LANGUAGE SYSTEM (FA / EN)
+// =======================
+
+const translations = {
+  fa: {
+    title: "مدیریت کارها",
+    addBtn: "➕ افزودن",
+    placeholderTitle: "عنوان کار...",
+    placeholderDesc: "توضیحات...",
+    stats: (t, p, e) => `📋 ${t} کار | ⏳ ${p} جاری | ⚠️ ${e} موعد گذشته`,
+    deadline: "ددلاین",
+    created: "ایجاد",
+    expired: "(گذشته)",
+    deleteConfirm: "آیا از حذف این کار اطمینان دارید؟",
+    empty: "✨ هیچ کاری در این بخش نیست. وقتشه یه کار جدید اضافه کنی!",
+    priorities: {
+      low: "🟢 کم",
+      medium: "🟡 متوسط",
+      high: "🔴 بالا",
+    },
+  },
+  en: {
+    title: "Task Manager",
+    addBtn: "➕ Add",
+    placeholderTitle: "Task title...",
+    placeholderDesc: "Description...",
+    stats: (t, p, e) => `📋 ${t} tasks | ⏳ ${p} pending | ⚠️ ${e} expired`,
+    deadline: "Deadline",
+    created: "Created",
+    expired: "(expired)",
+    deleteConfirm: "Are you sure you want to delete this task?",
+    empty: "✨ No tasks here. Time to add one!",
+    priorities: {
+      low: "🟢 Low",
+      medium: "🟡 Medium",
+      high: "🔴 High",
+    },
+  },
+};
+
+// وضعیت زبان
+let currentLang = localStorage.getItem("lang") || "fa";
+
+// دکمه سوییچ
+const langToggle = document.getElementById("langToggle");
+
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    currentLang = currentLang === "fa" ? "en" : "fa";
+    localStorage.setItem("lang", currentLang);
+    applyLanguage();
+    renderTasks();
+  });
+}
+
+// اعمال زبان روی UI
+function applyLanguage() {
+  const t = translations[currentLang];
+
+  document.documentElement.lang = currentLang;
+  document.body.style.direction = currentLang === "fa" ? "rtl" : "ltr";
+
+  // عنوان
+  const h1 = document.querySelector("h1");
+  if (h1) {
+    h1.innerHTML = `<span>✅</span> ${t.title}`;
+  }
+
+  // دکمه افزودن
+  const addBtn = document.getElementById("addBtn");
+  if (addBtn) addBtn.textContent = t.addBtn;
+
+  // placeholder ها
+  const titleInput = document.getElementById("taskTitle");
+  if (titleInput) titleInput.placeholder = t.placeholderTitle;
+
+  const descInput = document.getElementById("taskDesc");
+  if (descInput) descInput.placeholder = t.placeholderDesc;
+
+  // متن دکمه زبان
+  if (langToggle) {
+    langToggle.textContent = currentLang === "fa" ? "EN" : "FA";
+  }
+}
+
+// override متن‌ها در رندر
+const originalGetPriorityText = getPriorityText;
+getPriorityText = function (priority) {
+  const t = translations[currentLang];
+  return t.priorities[priority] || t.priorities.medium;
+};
+
+const originalUpdateStats = updateStats;
+updateStats = function () {
+  const total = tasks.length;
+  const pending = tasks.filter((t) => !t.completed).length;
+  const expired = tasks.filter(
+    (t) => !t.completed && isDeadlineExpired(t.deadline),
+  ).length;
+
+  const tText = translations[currentLang];
+
+  document.getElementById("statsInfo").innerHTML = tText.stats(
+    total,
+    pending,
+    expired,
+  );
+};
+
+const originalDeleteTask = deleteTask;
+deleteTask = function (id) {
+  const t = translations[currentLang];
+  if (confirm(t.deleteConfirm)) {
+    tasks = tasks.filter((t) => t.id !== id);
+    saveToStorage();
+    renderTasks();
+  }
+};
+
+// اجرای اولیه زبان
+applyLanguage();
