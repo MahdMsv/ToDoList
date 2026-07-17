@@ -47,7 +47,7 @@ This project supports **multi-language UI (Persian 🇮🇷 / English 🇺🇸)*
 
 1. Download `index.html`
 2. Double-click and open it in your browser
-3. No installation or server needed ✅
+3. No installation or server needed 
 
 ---
 
